@@ -1,0 +1,201 @@
+main {
+    height: auto;
+    width: 80%;
+    background: $white;
+    margin: 0 auto;
+    padding: 60px 0 00px;
+
+    // ====================
+    @media screen and (max-width:670px) {
+        justify-self: center;
+        padding: 0 0 20px;
+    }
+
+    // ==================                            
+
+    p {
+        line-height: 30px;
+    }
+
+    h6 {
+        font-weight: 40;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-weight: 1000;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        grid-template-columns: 55% 20%;
+
+    }
+
+    .class-center-button {
+        @include centerchild
+    }
+
+    .section-1 {
+        width: 80%;
+        margin: 0 auto;
+
+
+
+        .section-1-text {
+            display: block;
+            width: 70%;
+            margin: 0 auto;
+
+            .containter-center {
+
+                div {
+                    text-align: center;
+
+                    h6 {
+
+                        padding: 0 0 30px;
+
+                        &::after {
+                            content: '';
+                            width: 21%;
+                            height: 2px;
+                            background: $color3;
+                            position: absolute;
+                            left: 40%;
+                            transform: scale(1) translate(100%, 10px);
+                        }
+
+                        &::before {
+                            content: '';
+                            width: 21%;
+                            height: 2px;
+                            background: $color3;
+                            position: absolute;
+                            right: 40%;
+                            transform: scale(1) translate(-100%, 10px);
+                        }
+                    }
+
+                    h2 {
+                        font-size: 2.5rem;
+                        font-weight: 1000;
+                        // text-transform: uppercase;
+                        font-family: "Merriweather";
+                        // letter-spacing: 2px;
+                        padding-bottom: 30px;
+
+                        // ====================
+                        @media screen and (max-width:670px) {
+                            font-weight: 700;
+                            font-size: 1.8rem;
+                        }
+
+                        // ==================
+                    }
+
+                    p {
+                        font-family: "InterItalic";
+                    }
+                }
+            }
+
+        }
+
+        .section-1-img {
+            background: url(../../assets/img-webp/pic01.webp) center/cover;
+            height: 500px;
+            margin: 30px 0;
+        }
+
+        .class-center-button {
+            padding-bottom: 40px;
+        }
+
+    }
+
+    .section-2 {
+        border-top: 1px solid $color4;
+
+        .section1-container {
+
+            width: 90%;
+            margin: 0 auto;
+            // padding: 40px 0;
+
+            display: grid;
+            @include gridtwocolum;
+
+            // grid-template-columns: 50% 50%;
+            // justify-content: space-between;
+            // ====================
+            @media screen and (max-width:670px) {
+                display: block;
+            }
+
+            // ==================
+            h2 {
+                font-size: 1.1rem;
+                padding: 20px 0;
+            }
+
+            P {
+                padding-bottom: 30px;
+            }
+
+            .section-2-img {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .part-left {
+                border-right: 1px solid $color4;
+
+                // ====================
+                @media screen and (max-width:670px) {
+                    border-right: 0px solid $color4;
+                }
+
+                // ==================  
+                .part-left-container {
+
+                    width: 90%;
+                    padding: 50px 0;
+                    justify-self: start;
+
+                    // ====================
+                    @media screen and (max-width:670px) {
+                        justify-self: center;
+                        padding: 20px 0 0px;
+                    }
+
+                    // ==================
+
+                    .section-2-img {
+                        background: url(../../assets/img-webp/pic02.webp) center/cover;
+                    }
+
+                }
+            }
+
+            .part-right {
+                width: 90%;
+                // margin: 0 auto;
+                justify-self: end;
+                padding: 50px 0;
+
+                // ====================
+                @media screen and (max-width:670px) {
+                    justify-self: center;
+                    padding: 50px 0 0;
+                }
+
+                // ==================
+                .section-2-img {
+                    background: url(../../assets/img-webp/pic03.webp) center/cover;
+
+                }
+            }
+        }
+    }
+}

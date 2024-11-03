@@ -1,0 +1,465 @@
+body {
+  background: url(../../assets/img-webp/bg.webp) fixed center/cover;
+}
+body a {
+  text-decoration: none;
+  color: black;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url(../fonts/Merriweather-Bold.ttf);
+}
+@font-face {
+  font-family: "InterItalic";
+  src: url(../fonts/Inter-Italic-VariableFont_opsz\,wght.ttf);
+}
+@font-face {
+  font-family: "MerriweatherRegular";
+  src: url(../fonts/Merriweather-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-block: 0;
+  outline: none;
+  list-style: none;
+  font-family: MerriweatherRegular, sans-serif;
+}
+
+.button {
+  border: 2px solid black;
+  background: transparent;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.button:hover {
+  background: black;
+  color: white;
+}
+
+header {
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: headerAnim 1.5s forwards;
+}
+@keyframes headerAnim {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+header h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 80px 0 30px;
+}
+header p {
+  font-family: InterItalic, sans-serif;
+  text-align: center;
+}
+header .ico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+header .ico a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgb(248, 243, 243);
+  border-radius: 60px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+header nav {
+  width: 100%;
+  border: 1px solid rgba(202, 74, 74, 0.055);
+  background: rgba(247, 244, 244, 0.233);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 55% 20%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25%;
+  height: 65px;
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 670px) {
+  header nav {
+    grid-template-columns: 100%;
+  }
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  height: 65px;
+}
+header nav ul li {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+header nav ul li a {
+  color: white;
+}
+header nav .item {
+  height: 65px;
+}
+header nav .item:hover li:not(:hover) {
+  background: none;
+  color: white;
+}
+header nav .item ul {
+  justify-content: flex-start;
+}
+header nav .item ul li {
+  height: 100%;
+  padding: 0 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .item ul li:first-child {
+  background: white;
+  cursor: pointer;
+  height: 100%;
+  color: black;
+}
+header nav .item ul li:hover {
+  background: white;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.5s;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 670px) {
+  header nav .item ul li {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 670px) {
+  header nav .icon-header {
+    display: none;
+  }
+}
+header nav .icon-header ul {
+  justify-content: space-around;
+}
+header nav .icon-header ul li {
+  padding-right: 10px;
+}
+
+main {
+  height: auto;
+  width: 80%;
+  background: white;
+  margin: 0 auto;
+  padding: 60px 0 0px;
+}
+@media screen and (max-width: 670px) {
+  main {
+    justify-self: center;
+    padding: 0 0 20px;
+  }
+}
+main p {
+  line-height: 30px;
+}
+main h6 {
+  font-weight: 40;
+  font-size: 1rem;
+  text-align: center;
+}
+main h2 {
+  font-weight: 1000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  grid-template-columns: 55% 20%;
+}
+main .class-center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section-1 {
+  width: 80%;
+  margin: 0 auto;
+}
+main .section-1 .section-1-text {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+}
+main .section-1 .section-1-text .containter-center div {
+  text-align: center;
+}
+main .section-1 .section-1-text .containter-center div h6 {
+  padding: 0 0 30px;
+}
+main .section-1 .section-1-text .containter-center div h6::after {
+  content: "";
+  width: 21%;
+  height: 2px;
+  background: rgba(240, 233, 233, 0.801);
+  position: absolute;
+  left: 40%;
+  transform: scale(1) translate(100%, 10px);
+}
+main .section-1 .section-1-text .containter-center div h6::before {
+  content: "";
+  width: 21%;
+  height: 2px;
+  background: rgba(240, 233, 233, 0.801);
+  position: absolute;
+  right: 40%;
+  transform: scale(1) translate(-100%, 10px);
+}
+main .section-1 .section-1-text .containter-center div h2 {
+  font-size: 2.5rem;
+  font-weight: 1000;
+  font-family: "Merriweather";
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 670px) {
+  main .section-1 .section-1-text .containter-center div h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+}
+main .section-1 .section-1-text .containter-center div p {
+  font-family: "InterItalic";
+}
+main .section-1 .section-1-img {
+  background: url(../../assets/img-webp/pic01.webp) center/cover;
+  height: 500px;
+  margin: 30px 0;
+}
+main .section-1 .class-center-button {
+  padding-bottom: 40px;
+}
+main .section-2 {
+  border-top: 1px solid rgba(156, 152, 152, 0.753);
+}
+main .section-2 .section1-container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: space-between;
+}
+@media screen and (max-width: 670px) {
+  main .section-2 .section1-container {
+    display: block;
+  }
+}
+main .section-2 .section1-container h2 {
+  font-size: 1.1rem;
+  padding: 20px 0;
+}
+main .section-2 .section1-container P {
+  padding-bottom: 30px;
+}
+main .section-2 .section1-container .section-2-img {
+  height: 300px;
+  margin-bottom: 30px;
+}
+main .section-2 .section1-container .part-left {
+  border-right: 1px solid rgba(156, 152, 152, 0.753);
+}
+@media screen and (max-width: 670px) {
+  main .section-2 .section1-container .part-left {
+    border-right: 0px solid rgba(156, 152, 152, 0.753);
+  }
+}
+main .section-2 .section1-container .part-left .part-left-container {
+  width: 90%;
+  padding: 50px 0;
+  justify-self: start;
+}
+@media screen and (max-width: 670px) {
+  main .section-2 .section1-container .part-left .part-left-container {
+    justify-self: center;
+    padding: 20px 0 0px;
+  }
+}
+main .section-2 .section1-container .part-left .part-left-container .section-2-img {
+  background: url(../../assets/img-webp/pic02.webp) center/cover;
+}
+main .section-2 .section1-container .part-right {
+  width: 90%;
+  justify-self: end;
+  padding: 50px 0;
+}
+@media screen and (max-width: 670px) {
+  main .section-2 .section1-container .part-right {
+    justify-self: center;
+    padding: 50px 0 0;
+  }
+}
+main .section-2 .section1-container .part-right .section-2-img {
+  background: url(../../assets/img-webp/pic03.webp) center/cover;
+}
+
+footer {
+  font-family: "Merriweather";
+  height: auto;
+  width: 80%;
+  background: rgb(248, 243, 243);
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: space-between;
+}
+footer #longtext {
+  line-height: 30px;
+}
+@media screen and (max-width: 960px) {
+  footer {
+    display: block;
+  }
+}
+footer form {
+  width: 100%;
+  padding: 50px 0;
+  justify-self: start;
+  border-right: 1px solid rgba(156, 152, 152, 0.753);
+}
+footer form .button {
+  font-weight: 700;
+}
+footer form .container-type {
+  width: 80%;
+  margin: 0 auto;
+  justify-self: start;
+  display: grid;
+}
+footer form .container-type label {
+  font-weight: 400;
+  padding-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+footer form .container-type input[type=text] {
+  height: 40px;
+  border: 1px solid rgba(156, 152, 152, 0.753);
+  border-radius: 5px;
+  padding: 0 5px;
+}
+footer form .container-type input[type=text]:focus {
+  border: 2px solid skyblue;
+}
+footer form .container-type textarea {
+  height: 180px;
+  border: 1px solid rgba(156, 152, 152, 0.753);
+  border-radius: 5px;
+  padding: 0 5px;
+  resize: none;
+}
+footer form .container-type textarea:focus {
+  border: 2px solid skyblue;
+}
+footer form .containter-bouton {
+  width: 80%;
+  margin: 0 auto;
+}
+footer .contact {
+  width: 100%;
+}
+footer .contact .contact-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+}
+@media screen and (max-width: 670px) {
+  footer .contact .contact-container {
+    gap: 10px;
+  }
+}
+footer .contact .contact-container .contact-container-item {
+  height: 100%;
+  border-bottom: 1px solid rgba(156, 152, 152, 0.753);
+  display: grid;
+  grid-template-columns: 30% 70%;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+@media screen and (max-width: 960px) {
+  footer .contact .contact-container .contact-container-item {
+    grid-template-columns: 40% 60%;
+  }
+  footer .contact .contact-container .contact-container-item:first-child {
+    border-top: 1px solid rgba(156, 152, 152, 0.753);
+  }
+}
+footer .contact .contact-container h3 {
+  font-weight: 400;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding-left: 40px;
+}
+@media screen and (max-width: 670px) {
+  footer .contact .contact-container h3 {
+    padding-left: 20px;
+  }
+}
+footer .contact .contact-container h3 p {
+  padding-left: 20px;
+}
+footer .contact .contact-container ul {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .contact .contact-container ul li {
+  border: 1px solid rgba(156, 152, 152, 0.753);
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 670px) {
+  footer .contact .contact-container ul li {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+  }
+}
+footer .contact .contact-container ul li a:hover {
+  color: skyblue;
+  transition: 0.5s;
+}/*# sourceMappingURL=index.css.map */
